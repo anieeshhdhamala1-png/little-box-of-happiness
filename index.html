@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Surprise ♡</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Georgia, serif;
+      background: linear-gradient(135deg, #fff0f5, #ffe0eb, #fce4ec);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      color: #75465b;
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.72);
+      padding: 45px 25px;
+      border-radius: 25px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 10px 35px rgba(190, 100, 140, 0.15);
+      border: 1px solid white;
+      animation: appear 1.2s ease;
+      z-index: 2;
+    }
+
+    .flower {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 34px;
+      color: #c45d83;
+      margin-bottom: 15px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    .date {
+      display: inline-block;
+      background: #fbd1e0;
+      color: #a13f68;
+      padding: 13px 22px;
+      border-radius: 15px;
+      font-size: 21px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 22px;
+      box-shadow: 0 4px 12px #e9b5ca;
+    }
+
+    .message {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .start-btn {
+      display: inline-block;
+      text-decoration: none;
+      background: #d8799e;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 15px;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px #e9b5ca;
+    }
+
+    .start-btn:hover {
+      background: #bd5e85;
+      transform: translateY(-3px);
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 13px;
+      color: #ae7890;
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -30px;
+      color: #e99bb8;
+      font-size: 20px;
+      animation: float 7s linear infinite;
+      opacity: 0.7;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+      20% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="flower">🌸</div>
+
+    <h1>A Little Surprise</h1>
+
+    <p class="subtitle">
+      Sometimes, one unexpected message
+      becomes the beginning of something beautiful...
+    </p>
+
+    <div class="date">
+      31 October 2026
+    </div>
+
+    <p class="message">
+      The day two strangers crossed paths,
+      and an unexpected friendship began. ♡
+      <br><br>
+      This little website has a story,
+      some surprises, and a special place
+      dedicated to you.
+    </p>
+
+    <a href="our-story.html" class="start-btn">
+      Begin Our Journey ♡
+    </a>
+
+    <div class="footer">
+      Made with friendship & a little bit of magic ✨
+    </div>
+
+  </div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "♡";
+
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+      heart.style.fontSize = (15 + Math.random() * 20) + "px";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 10000);
+    }
+
+    setInterval(createHeart, 700);
+  </script>
+
+</body>
+</html>
